@@ -33,53 +33,22 @@
 		<!-- One -->
 			
 			<section id="one" class="wrapper">
-				<div class="inner flex flex-3">
 					
-					<div class ="secondDivID">
-						<div class="limiter">
-		
-							<div class="wrap-login100">
-								<div class="login100-pic js-tilt" style="margin-top:80px;" data-tilt>
-									<img src="{% static 'images/reddit_img_centre.png' %}" alt="IMG">
-								</div>
-				
-								<form class="login100-form validate-form">
-									<span class="login100-form-title">
-										
-									</span>
-									<span class="login100-form-title">
-										
-									</span>
-				
-									<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-										<input class="input100" type="text" name="email" placeholder="User Name">
-										<span class="focus-input100"></span>
-										<span class="symbol-input100">
-											<i class="fa fa-envelope" aria-hidden="true"></i>
-										</span>
-									</div>
-									<div class="wrap-input100 validate-input" data-validate = "Password is required">
-										<input class="input100" type="password" name="pass" placeholder="Password">
-										<span class="focus-input100"></span>
-										<span class="symbol-input100">
-											<i class="fa fa-lock" aria-hidden="true"></i>
-										</span>
-									</div>
-									
-									<div class="container-login100-form-btn">
-										<button class="login100-form-btn" name="loginbutton">
-											Login
-										</button>
-									</div>
-				
-				
-								</form>
-							</div>
-					
+				<div class ="secondDivID">
+	
+					<div class="login100-pic js-tilt" style="margin-top:80px;margin-left: 800px;" data-tilt>
+						<img src="{% static 'images/reddit_img_centre.png' %}" alt="IMG">
 					</div>
-					</div>					
+					<div class="container-login100-form-btn" style="margin-top:80px;margin-left: 760px;width: 300px;">
+						<a class="btn btn-primary" href="{% url 'utils'%}">Login With Reddit</a>
+					</div>
+	
+
+
+		
+				
+				</div>					
 					
-				</div>
 			</section>
 
 		
