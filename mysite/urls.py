@@ -23,7 +23,7 @@ urlpatterns = [
     url(r'^$',views.index, name='index'),
     url(r'^index/',views.index, name='index'),
     url(r'^suggestion/',views.suggestions, name='suggestions'),
-    url(r'^utils/',views.utils, name='utils'),
+    url(r'^utils/',views.redirect_utils, name='utils'),
     path('admin/', admin.site.urls)
 
     # Hello, world!

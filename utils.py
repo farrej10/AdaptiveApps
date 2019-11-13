@@ -1,9 +1,10 @@
-# -*- coding: utf-8 -*-
 """
 Created on Mon Nov  4 10:05:23 2019
-
 @author: David
 """
+from django.http import HttpResponse
+from django.shortcuts import render
+from django.shortcuts import redirect
 import configparser
 import praw
 import yake
