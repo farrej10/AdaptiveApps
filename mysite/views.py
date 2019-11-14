@@ -8,6 +8,11 @@ def index(request):
 
 def suggestions(request):
 
+    code = request.Get.get('code')
+    token = authenticate_user(code)
+    get_authenticated_user_data(token)
+
+
     return render(request,'SubSuggest_Final.html')
 
 #def utils(request):
@@ -17,6 +22,6 @@ def suggestions(request):
 
 def redirect_utils(request):
 
-
+    url = new_user()
     response = redirect(url)
     return response
