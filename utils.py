@@ -83,7 +83,7 @@ def authenticate_user(code):
     
     reddit = praw.Reddit(client_id=client_id,
                          client_secret=client_secret,
-                         redirect_uri="http://localhost:8000/suggestion",
+                         redirect_uri="http://subsuggester.com/suggestion",
                          user_agent=user_agent)
 
     refresh_token = reddit.auth.authorize(code)
@@ -98,7 +98,7 @@ def new_user():
     
     reddit = praw.Reddit(client_id=client_id,
                          client_secret=client_secret,
-                         redirect_uri="http://localhost:8000/suggestion",
+                         redirect_uri="http://subsuggester.com/suggestion",
                          user_agent=user_agent)
     state = str(random.randint(0, 65000))
     url = reddit.auth.url(['mysubreddits', 'read', 'identity', 'history'], state, 'permanent')
