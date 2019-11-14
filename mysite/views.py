@@ -1,14 +1,15 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 from django.shortcuts import redirect
-import utils
+from utils import new_user,authenticate_user,get_authenticated_user_data
 
 def index(request):
     return render(request,'index.html')
 
 def suggestions(request):
 
-    code = request.Get.get('code')
+    code = request.GET.get('code','')
+    #breakpoint()
     token = authenticate_user(code)
     get_authenticated_user_data(token)
 

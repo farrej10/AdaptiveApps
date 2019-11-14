@@ -74,7 +74,18 @@ def receive_connection():
 
 
 def authenticate_user(code):    
-        
+    
+    config = configparser.ConfigParser()
+    config.read(INI_FILE)
+    client_id = config['REDDIT_API']['client_id']
+    client_secret = config['REDDIT_API']['client_secret']
+    user_agent = config['REDDIT_API']['user_agent']
+    
+    reddit = praw.Reddit(client_id=client_id,
+                         client_secret=client_secret,
+                         redirect_uri="http://localhost:8000/suggestion",
+                         user_agent=user_agent)
+
     refresh_token = reddit.auth.authorize(code)
     return refresh_token
 
