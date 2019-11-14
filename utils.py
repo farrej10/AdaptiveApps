@@ -126,8 +126,15 @@ def get_authenticated_user_data(refresh_token):
                          user_agent=user_agent)
     print('Now authorised as: {}'.format(reddit.user.me()))
     print('They are subscribed to:')
+
+    sublist = []
     for subreddit in reddit.user.subreddits():
-        print(subreddit)
-        
+        print(subreddit.display_name)
+        sublist.append(subreddit.display_name)
+
+    return sublist
+
+
+
 if __name__ == '__main__':    
     new_user()
