@@ -68,17 +68,39 @@
 								</div>
 								
 								{% for sub in sublist %}
+								
 								<div class="row">
 									<div class="cell" data-title="Full Name">
 										{{ forloop.counter }}
 									</div>
-									<div class="cell" data-title="Age">
-										{{sub}}
-									</div>
-									
+									<a href="https://reddit.com/r/{{sub}}" style="text-decoration:none">
+										<div class="cell" data-title="Age">
+											{{sub}}
+										</div>
+									</a>							
 								</div>
+								
 								{% endfor %}
-			
+								<div class="row">
+									<div class="cell" data-title="Full Name">
+										11
+									</div>
+									<a href="https://reddit.com/r/{{country}}" style="text-decoration:none">
+										<div class="cell" data-title="Age">
+											{{country}}
+										</div>
+									</a>							
+								</div>
+								<div class="row">
+									<div class="cell" data-title="Full Name">
+										12
+									</div>
+									<a href="https://reddit.com/r/{{city}}" style="text-decoration:none">
+										<div class="cell" data-title="Age">
+											{{city}}
+										</div>
+									</a>							
+								</div>
 					
 		
 							</div>

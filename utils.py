@@ -140,7 +140,7 @@ def new_user():
                          redirect_uri="http://subsuggester.com/suggestion",
                          user_agent=user_agent)
     state = str(random.randint(0, 65000))
-    url = reddit.auth.url(['mysubreddits', 'read', 'identity', 'history'], state, 'permanent')
+    url = reddit.auth.url(['mysubreddits', 'read', 'identity'], state, 'permanent')
     return url
 
 def parse_authorisation_error(authorisation):    
@@ -173,7 +173,7 @@ def get_authenticated_user_data(refresh_token):
     data = dict(
         keywords = keywords
     )
-    r = requests.post("http://104.197.125.247:5000/model", data=data)
+    r = requests.post(url = "http://104.197.125.247:5000/model", data=data)
     sublist_json = r.json()
     sublist = sublist_json['sublist']
     
