@@ -173,7 +173,7 @@ def get_authenticated_user_data(refresh_token):
     data = dict(
         keywords = keywords
     )
-    r = requests.post("http://34.66.204.144:5000/model", data=data)
+    r = requests.post("http://104.197.125.247:5000/model", data=data)
     sublist_json = r.json()
     sublist = sublist_json['sublist']
     
