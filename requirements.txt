@@ -1,5 +1,5 @@
 # requirements.txt file
-Django==2.2.18
+Django==2.2.20
 configparser
 praw
 yake
